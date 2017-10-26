@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KotlinAndroid</string>
+
+    <string name="show">Show message</string>
+    <string name="update">Update</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+</resources>
