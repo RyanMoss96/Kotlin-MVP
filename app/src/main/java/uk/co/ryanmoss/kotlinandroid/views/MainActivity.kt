@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity(), SayHelloInterface.View, View.OnClickLi
         Toast.makeText(applicationContext, error, Toast.LENGTH_SHORT).show();
     }
 
+    override fun showSuccess(success: String) {
+        Toast.makeText(applicationContext, success, Toast.LENGTH_SHORT).show();
+    }
+
     override fun onClick(view: View) {
         when(view.id) {
             R.id.update -> presenter?.createPerson(firstNameView?.text.toString(), lastNameView?.text.toString(), ageView?.text.toString())

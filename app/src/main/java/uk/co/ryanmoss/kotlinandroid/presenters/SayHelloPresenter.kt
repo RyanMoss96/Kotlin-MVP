@@ -16,10 +16,14 @@ class SayHelloPresenter: SayHelloInterface.Presenter {
     }
 
     override fun createPerson(firstName: String, lastName: String, age: String) {
-        if(!age.isNullOrEmpty() && !firstName.isNullOrEmpty() && !lastName.isNullOrEmpty())
+        if(!age.isNullOrEmpty() && !firstName.isNullOrEmpty() && !lastName.isNullOrEmpty()) {
             person = Person(firstName, lastName, age.toInt())
-        else
+            view?.showSuccess("Person successfully created")
+        }
+        else {
             view?.showError("Please complete all details")
+        }
+           
     }
 
     override fun loadMessage() {

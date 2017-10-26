@@ -7,6 +7,7 @@ interface SayHelloInterface {
     interface View {
         fun showMessage(message:String)
         fun showError(error: String)
+        fun showSuccess(success: String)
     }
 
     interface Presenter {
